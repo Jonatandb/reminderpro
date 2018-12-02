@@ -56,7 +56,7 @@ class App extends Component<Props, State> {
 }
 
 export default connect( 
-  state => ({ reminders: state})
+  state => ({ reminders: state.reminders})
   ,
   { addReminder }
 )(App);

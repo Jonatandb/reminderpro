@@ -1,22 +1,26 @@
 import { ADD_REMINDER } from '../constants';
 
-const createReminder = action => {
-  return {
-    text: action.payload,
-    id: Math.random(),
-  }
-}
-
-const remindersReducer = (state = [], action) => {
-  let newState = null;
+const reminders = (state = [], action) => {
   switch(action.type) {
     case ADD_REMINDER:
-      newState = [...state, createReminder(action)];
-      return newState;
+      return [
+        ...state, 
+        {
+          id: Math.random(),
+          text: action.payload,
+        }
+      ]
     default:
       return state;
   }
 }
 
-export default remindersReducer;
+const remindersProReducer = (state = {}, action) => {
+  return  {
+    reminders: reminders(state.reminders, action),
+   }
+}
+
+export default remindersProReducer;
+
 // Reducers: funciones que reciben el state y una acción y devuelven un nuevo objeto state.
