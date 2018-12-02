@@ -1,8 +1,23 @@
+// @flow
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addReminder } from "../actions";
 
-class App extends Component {
+type Reminder = {
+ id: number, 
+ text: string,
+}
+
+type Props = {
+  addReminder: (string) => void,
+  reminders: Array<Reminder>,
+}
+
+type State = {
+  text: string,
+}
+
+class App extends Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,6 +26,7 @@ class App extends Component {
   }
 
   addReminder() {
+    if (!this.state.text) return;
     this.props.addReminder(this.state.text);
   }
   
