@@ -1,5 +1,6 @@
 {
-  "name": "runner",
+  "homepage": "http://jonatandb.github.io/reminderpro",
+  "name": "reminderpro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,15 +8,14 @@
     "react-dom": "^16.5.2",
     "react-redux": "5.1.1",
     "react-scripts": "2.0.3",
-    "redux": "4.0.1",
-    "gh-pages": "^2.0.1",
+    "redux": "4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -29,6 +29,5 @@
   ],
   "devDependencies": {
     "flow-bin": "^0.87.0"
-  },
-  "homepage": "http://jonatandb.github.io/reminderpro"
+  }
 }
