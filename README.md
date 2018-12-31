@@ -26,3 +26,6 @@ Pendientes:
     -   Agregar opción para exportar la lista de reminders.
     -   Agregar opción para elegir la fecha.
     -   Hacer que tengan un estilo resaltado los reminders con fecha igual a la actual. 
+	
+Agregada funcionalidad para publicar en Github pages: "Building and Deploying a React App" - https://www.taniarascia.com/getting-started-with-react/
+Thanks Tania! ;-)
