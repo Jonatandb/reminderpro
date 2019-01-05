@@ -2,8 +2,10 @@
 
 Basic reminder app - React and Redux
 
+https://jonatandb-reminderpro.netlify.com/
+
 ## Preview
-![https://jonatandb-reminderpro.netlify.com/](preview.png?raw=true)
+![](preview.png?raw=true)
 
 # Pendientes:
 - Agregar foco al input, al inicio y luego de clickear el botón Add.
