@@ -37,3 +37,10 @@ Basic reminder app - React and Redux
 ```
 - 5º Agregar como primera línea "// @flow" (sin comillas) a los archivos donde se desee que flow haga el chequeo de tipos estático.
 - 6º Desde VSCODE, desactivar Javascript > Validate.
+
+# Pasos para que funcione [Netlify](https://.netlify.com):
+- 1º Agregar una carpeta vacía en el raíz, llamada: build 
+- 2º En caso de que el archivo [packages.json](packages.json?raw=true) tenga un linea para "homepage", eliminarla.
+- 3º Iniciar sesión en [Netlify](https://.netlify.com) y hacer click en el botón ["New site from Git"](https://app.netlify.com/start)
+- 4º En el asistente elegir el servicio donde está repositorio, por ej GitHub, luego elegir el reposito y finalmente clickear en "Deploy site".
+- Opcionalmente se puede elegir un dominio personalizado yendo a "Domain settings -> Edit site name".
