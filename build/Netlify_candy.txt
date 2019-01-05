@@ -1,0 +1,1 @@
+Dejo este archivo acá porque si lo borro Github elimina también la carpeta build por estar vacía y si pasa eso Netlify tira error durante el build ya que necesita que esta carpeta exista.
