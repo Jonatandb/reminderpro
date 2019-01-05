@@ -11,8 +11,7 @@ Basic reminder app - React and Redux
 - Hacer que al clickear un reminder tachado se destache.
 - Agregar un botón para eliminar un reminder.
 - Agregar opciones para filtrado por reminders resueltos, pendientes y todos.
-- Agregar estilos ;-)
-- Agregar opción para exportar la lista de reminders.
+- Agregar opción para exportar la lista de reminders (o enviarla por mail)
 - Agregar opción para elegir la fecha.
 - Hacer que tengan un estilo resaltado los reminders con fecha igual a la actual. 
 - Aplicar diseño con [Ant Design](https://ant.design/) o [Material UI](https://material-ui.com/getting-started/installation/)
