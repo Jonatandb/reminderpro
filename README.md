@@ -2,8 +2,6 @@
 
 Basic reminder app - React and Redux
 
-https://jonatandb-reminderpro.netlify.com/
-
 ## Preview
 [![Jonatandb](preview.png?raw=true "Reminderpro")](https://jonatandb-reminderpro.netlify.com/)
 
