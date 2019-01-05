@@ -2,6 +2,8 @@
 
 Basic reminder app - React and Redux
 
+## Preview
+![](preview.png?raw=true)
 
 # Pendientes:
 - Agregar foco al input, al inicio y luego de clickear el botón Add.
