@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addReminder } from "../actions";
 
-class App {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '',
-    }
+      text: "",
+    };
   }
 
   addReminder() {
@@ -19,18 +19,23 @@ class App {
     const { reminders } = this.props;
     return reminders && reminders.length > 0 ? (
       <ul>
-        { reminders.map(r => <li key={r.id}>{r.text}</li>)}
+        {reminders.map((r) => (
+          <li key={r.id}>{r.text}</li>
+        ))}
       </ul>
-    )
-    :
-    <p>Add a todo!</p>
+    ) : (
+      <p>Nothing to do yet!</p>
+    );
   }
 
   render() {
     return (
       <div>
         <h1>Reminder Pro</h1>
-        <input placeholder="I have to..." onChange={event => this.setState({text: event.target.value})}/>
+        <input
+          placeholder="I have to..."
+          onChange={(event) => this.setState({ text: event.target.value })}
+        />
         <button type="button" onClick={() => this.addReminder()}>
           Add new reminder
         </button>
@@ -41,7 +46,6 @@ class App {
 }
 
 export default connect(
-  state => ({ reminders: state.reminders})
-  ,
+  (state) => ({ reminders: state.reminders }),
   { addReminder }
 )(App);
