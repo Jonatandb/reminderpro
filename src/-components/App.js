@@ -1,23 +1,8 @@
-// @flow
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addReminder } from "../actions";
 
-type Reminder = {
- id: number, 
- text: string,
-}
-
-type Props = {
-  addReminder: (string) => void,
-  reminders: Array<Reminder>,
-}
-
-type State = {
-  text: string,
-}
-
-class App extends Component<Props, State> {
+class App {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,7 +14,7 @@ class App extends Component<Props, State> {
     if (!this.state.text) return;
     this.props.addReminder(this.state.text);
   }
-  
+
   reminders() {
     const { reminders } = this.props;
     return reminders && reminders.length > 0 ? (
@@ -37,7 +22,7 @@ class App extends Component<Props, State> {
         { reminders.map(r => <li key={r.id}>{r.text}</li>)}
       </ul>
     )
-    : 
+    :
     <p>Add a todo!</p>
   }
 
@@ -55,7 +40,7 @@ class App extends Component<Props, State> {
   }
 }
 
-export default connect( 
+export default connect(
   state => ({ reminders: state.reminders})
   ,
   { addReminder }
